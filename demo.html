@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8"/>
+		<script src="./Highlight.js" type="text/javascript">	</script>
+	</head>
+	<body>
+<style>
+	.comments{color:#ccc}
+	.keyword{color:red;}
+	.string{color:blue;}
+	.builtin{color:#fabcde;}
+	.regexp{color:#008200}
+</style>
+<pre class="jscript">
+//这里定义类A和类B，类A中有一个方法a，触发一个a事件  
+//类B想在A触发a的时候调用方法b  
+ 
+ /*
+  * 多汗注释
+  */
+var cc="asdf\"asdf";/*多汗注释单行版*/
+var reg = /test['"]/ig;
+
+function A(){};  
+A.prototype = {  
+    a: function(a){
+		if (/undefined/.test(a)){
+			this.trigger('ona',{data:'data'})
+		}
+    }  
+};
+ /*
+  * 多汗注释
+  */
+//这里A类继承Bee.Emitter类  
+Bee.copy(A,Bee.Emitter);  
+function B(){};
+ /*
+  * 多汗注释
+  */  
+B.prototype = {  
+    b: function(data/*这里传入数据*/){  
+        console.log('trigger B.b',data);
+        window.alert(11);
+    }  
+}; 
+
+/*
+  * 多汗注释
+  * //adfadsf
+  */
+//下面是调用部分  
+var aa = new A;//实例化  
+var bb = new B;  
+//在aa上注册广播ona的接受接受器为bb.b方法  
+aa.on('ona',bb.b);  
+aa.on('onaa',bb.b);  
+</pre>
+<script>
+	try{
+	Highlighter.HighlightAll();
+	}catch(e){alert(e);}
+</script>
+
+</body>
+</html>
