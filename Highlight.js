@@ -7,7 +7,6 @@
   	
   	rnewline = /\n/g,
   	rtabline = /\t/g,
-  	rempty 	 = /^[\s\t\n\r]*$/,
   	regsafe  = /([.*?\/\\])/g,
   	rregexp  = /([^\w\\]|^)(\/.+\/)([igm]*)?([^\w]|$)/,
   	rstring  = /([^\w\\]|^)(['"].*?['"])([^\w]|$)/g;
