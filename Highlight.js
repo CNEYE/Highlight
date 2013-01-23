@@ -159,7 +159,7 @@
   		//单行注释
   		singlecomments: '//',
   		//关键字
-  		keyword: 'new,var,function,arguments,returen,delete,continue,break,this,prototype,typeof,case,do,if,else,switch,catch,try,null,default,for,finally,debugger,true,false,while,void'.split(','),
+  		keyword: 'new,var,function,arguments,return,delete,continue,break,this,prototype,typeof,case,do,if,else,switch,catch,try,null,default,for,finally,debugger,true,false,while,void'.split(','),
   		//内建对象函数,当标记为true的时候，表示该内建对象为window上的所有元素
   		builtin: function(keys){
   			for(var p in window){
